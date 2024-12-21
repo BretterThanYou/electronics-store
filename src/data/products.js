@@ -39,7 +39,7 @@ const products = [
       category: 'computers',
       image: mac,
       description: 'Powerful Mac Laptop with built in Apple Artificial Intelligence',
-      price: 1499.99,
+      price: 1699.99,
     },
     {
       id: 5,
