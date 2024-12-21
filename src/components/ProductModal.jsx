@@ -23,7 +23,6 @@ const ProductModal = ({ product, onClose }) => {
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <p><strong>Price:</strong> ${product.price.toFixed(2)}</p>
-          {/* Add more details as needed */}
         </div>
       </div>
     </Modal>

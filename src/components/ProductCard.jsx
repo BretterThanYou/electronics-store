@@ -1,8 +1,8 @@
 // src/components/ProductCard.jsx
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
-import ProductModal from './ProductModal';
 import '../styles/ProductCard.css';
+
 
 const ProductCard = ({ product, onSelect }) => {
   const { addToCart } = useContext(CartContext);
@@ -10,7 +10,7 @@ const ProductCard = ({ product, onSelect }) => {
 
   const handleAddToCart = () => {
     addToCart(product, quantity);
-    setQuantity(1); // Reset quantity after adding
+    setQuantity(1);
   };
 
   return (

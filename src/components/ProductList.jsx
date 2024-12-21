@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import productsData from '../data/products';
 import ProductCard from './ProductCard';
+import ProductModal from './ProductModal';
 import '../styles/ProductList.css';
 
 const ProductList = ({ category }) => {
