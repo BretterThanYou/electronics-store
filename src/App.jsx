@@ -17,7 +17,6 @@ function App() {
           <Route path="/smartphones" element={<ProductList category="smartphones" />} /> {/* Updated Route */}
           <Route path="/accessories" element={<ProductList category="accessories" />} />
           <Route path="/cart" element={<Cart />} />
-          {/* Add more routes as needed */}
         </Routes>
       </Router>
     </CartProvider>
