@@ -38,9 +38,9 @@ const Cart = () => {
             <tbody>
               {cartItems.map((item) => (
                 <tr key={item.id}>
-                  <td>{item.title}</td>
-                  <td>${item.price.toFixed(2)}</td>
-                  <td>
+                  <td data-label="Product">{item.title}</td>
+                  <td data-label="Price">${item.price.toFixed(2)}</td>
+                  <td data-label="Quantity">
                     <input
                       type="number"
                       min="1"
@@ -50,11 +50,9 @@ const Cart = () => {
                       }
                     />
                   </td>
-                  <td>${(item.price * item.quantity).toFixed(2)}</td>
-                  <td>
-                    <button onClick={() => removeFromCart(item.id)}>
-                      &times;
-                    </button>
+                  <td data-label="Subtotal">${(item.price * item.quantity).toFixed(2)}</td>
+                  <td data-label="Remove">
+                    <button onClick={() => removeFromCart(item.id)}>&times;</button>
                   </td>
                 </tr>
               ))}

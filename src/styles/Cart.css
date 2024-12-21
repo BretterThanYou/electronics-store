@@ -1,47 +1,99 @@
 /* src/styles/Cart.css */
+
 .cart-container {
-    padding: 20px;
+  padding: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+}
+
+.cart-table input {
+  width: 60px;
+  padding: 5px;
+}
+
+.cart-table button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart-table button:hover {
+  background-color: #c82333;
+}
+
+.cart-summary {
+  text-align: right;
+  font-size: 18px;
+}
+
+.cart-summary p, .cart-summary h3 {
+  margin: 5px 0;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 15px;
   }
-  
-  .cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
+
   .cart-table th, .cart-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+    padding: 10px;
+    font-size: 14px;
   }
-  
-  .cart-table th {
-    background-color: #f2f2f2;
-  }
-  
-  .cart-table input {
-    width: 60px;
-    padding: 5px;
-  }
-  
-  .cart-table button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .cart-table button:hover {
-    background-color: #c82333;
-  }
-  
+
   .cart-summary {
+    font-size: 16px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 10px;
+  }
+
+  .cart-table, .cart-table thead, .cart-table tbody, .cart-table th, .cart-table td, .cart-table tr {
+    display: block;
+  }
+
+  .cart-table tr {
+    margin-bottom: 15px;
+  }
+
+  .cart-table td {
     text-align: right;
-    font-size: 18px;
+    padding-left: 50%;
+    position: relative;
   }
-  
-  .cart-summary p, .cart-summary h3 {
-    margin: 5px 0;
+
+  .cart-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
   }
+
+  .cart-summary {
+    font-size: 16px;
+  }
+}
